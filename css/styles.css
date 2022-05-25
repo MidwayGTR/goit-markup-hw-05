@@ -302,7 +302,7 @@ img {
     color: var(--main-cl);
 }
 
-/* ========= work section ========= */
+/* work section  */
 .work-section {
     padding-top: 0;
 }
@@ -314,7 +314,44 @@ img {
 
 .work-item {
     --items: 3;
+    position: relative;
 }
+
+/* .work-item::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+
+} */
+
+.work-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 70px;
+
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+    background-color: rgba(47, 48, 58, 0.8);
+
+
+}
+
 
 .title {
     font-weight: 700;

@@ -129,6 +129,7 @@ img {
 
 .nav-item {
     margin-right: 50px;
+    position: relative;
 }
 
 .nav-item:last-child {
@@ -156,6 +157,21 @@ img {
 
 .current {
     color: var(--acent-cl);
+}
+
+.current::before {
+    content: "";
+    position: absolute;
+
+    display: flex;
+    width: 100%;
+    height: 4px;
+
+    bottom: 0;
+    left: 0;
+
+    background-color: #2196F3;
+    border-radius: 2px;
 }
 
 .contact-list {

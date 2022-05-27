@@ -23,8 +23,8 @@
     --items: 1;
     --indent: 30px;
 
-    /* transition */
-    --transition-duration: 2500ms;
+    /* transition hover */
+    --transition-duration: 250ms;
     --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --animation: var(--transition-duration) var(--transition-timing-function);
 }
@@ -291,8 +291,11 @@ img {
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.2);
+
+    transition: visibility 1500ms ease-in, opacity 1500ms ease-in, transform 1500ms ease-in;
     z-index: 10;
 }
+
 
 .backdrop.is-hidden {
     opacity: 0;
@@ -306,14 +309,24 @@ img {
     left: 50%;
     width: 528px;
     height: 581px;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1.1);
 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
     background-color: #FFFFFF;
-
+    transition: transform 1500ms ease-out;
 }
+
+
+
+.backdrop.is-hidden .modal-wraper {
+    transform: translate(-50%, -50%) scale(0.5, 0.5) rotate(90deg);
+}
+
+
+
+
 
 .close-btn {
     position: absolute;
@@ -337,7 +350,6 @@ img {
     fill: #000000;
 
 }
-
 
 
 /* Specific section */
@@ -697,6 +709,8 @@ img {
     border-radius: 4px;
 
     cursor: pointer;
+
+    transition: color var(--animation), background-color var(--animation), box-shadow var(--animation);
 }
 
 .filter-item:last-child {

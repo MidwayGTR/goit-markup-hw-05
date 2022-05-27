@@ -24,8 +24,9 @@
     --indent: 30px;
 
     /* transition */
-    --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --transition-duration: 2500ms;
+    --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --animation: var(--transition-duration) var(--transition-timing-function);
 }
 
 
@@ -150,7 +151,7 @@ img {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--second-cl);
-    transition: color var(--transition-duration) var(--transition-timing-function);
+    transition: color var(--animation);
 }
 
 .smartphone-icon:hover,
@@ -195,7 +196,7 @@ img {
     align-items: center;
     color: var(--main-cl);
 
-    transition: color var(--transition-duration) var(--transition-timing-function);
+    transition: color var(--animation);
 
 }
 
@@ -217,9 +218,8 @@ img {
 .header-icon {
     margin-right: 10px;
     fill: #757575;
-    transition-property: fill;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-timing-function);
+
+    transition: fill var(--animation);
 }
 
 /*#endregion*/
@@ -275,7 +275,7 @@ img {
     border: 0px;
 
     cursor: pointer;
-    transition: background-color var(--transition-duration) var(--transition-timing-function);
+    transition: background-color var(--animation);
 }
 
 .btn:hover,
@@ -508,7 +508,7 @@ img {
     background-color: #ffffff;
 
     border-radius: 50%;
-    transition: background-color var(--transition-duration) var(--transition-timing-function);
+    transition: background-color var(--animation);
 
 }
 
@@ -548,8 +548,7 @@ img {
 
     border: 1px solid #AFB1B8;
     border-radius: 4px;
-    /* доробити правельно fill анімацію */
-    transition: color var(--transition-duration) var(--transition-timing-function), border-color var(--transition-duration) var(--transition-timing-function);
+    transition: color var(--animation);
 
 }
 
@@ -559,7 +558,7 @@ img {
 
 .client-icon {
     fill: #AFB1B8;
-    transition: fill var(--transition-duration) var(--transition-timing-function)
+    transition: fill var(--animation);
 }
 
 .client-link:hover,
@@ -623,14 +622,14 @@ img {
 
 .footer-link {
     color: var(--bg-cl);
-    transition: color var(--transition-duration) var(--transition-timing-function);
+    transition: color var(--animation);
 }
 
 .foot-contacts {
     margin-top: 9px;
     display: block;
     color: var(--footer-color);
-    transition: color var(--transition-duration) var(--transition-timing-function);
+    transition: color var(--animation);
 }
 
 /*social-block  */
